@@ -8,6 +8,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    bookCount: Int
     savedBooks: [Book]
   }
   type Book {
@@ -51,7 +52,8 @@ const typeDefs = gql`
       bookId: String
       image: String
       link: String
-    ): Book
+    ): User
+    removeBook(bookid: String!): User
     
   }
 `;
